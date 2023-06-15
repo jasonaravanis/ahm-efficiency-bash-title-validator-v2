@@ -1,11 +1,10 @@
-name: 'Your name here'
-description: 'Provide a description here'
+name: 'ahm-pr-title-validator'
+description: 'Check that pull request title contains minor/major/patch'
 author: 'Your name or organization here'
 inputs:
-  milliseconds: # change this
+  pattern: # change this
+    description: 'A regex pattern to check if a pull request title is valid.'
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
 runs:
-  using: 'node16'
+  using: 'node18'
   main: 'dist/index.js'
